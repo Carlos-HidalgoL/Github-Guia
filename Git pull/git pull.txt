@@ -1,0 +1,51 @@
+------Información sobre Git pull-----
+
+Este comando actualiza la rama actual con los cambios en la rama remota.
+
+
+Tabla de Resumen
+
+Comando                             | Descripción
+----------------------------------- | ----------------------------------------------
+git pull                            | Actualiza la rama local con los cambios remotos.
+git pull origin nombre-de-la-rama   | Obtiene los cambios de una rama específica en el remoto.
+git pull --rebase                   | Reorganiza los commits locales en la parte superior de los commits remotos.
+git pull --no-commit                | Hace el merge sin crear un commit automáticamente.
+git pull --verbose                  | Muestra más información sobre el pull.
+git pull -X ours                    | Da preferencia a los cambios locales en caso de conflicto.
+git pull --recurse-submodules       | Actualiza los submódulos también.
+git pull origin nombre-de-la-rama --allow-unrelated-histories | Permite mezclar historias no relacionadas.
+
+
+-NORMAL
+Para actualizar la rama local con los cambios de la rama remota.
+Comando: git pull
+
+-ESPECIFICAR RAMAS
+Para obtener los cambios de una rama especifica en el repositorio remoto.
+Comando: git pull origin nombre-de-la-rama
+
+-OPCIONES COMUNES
+Reorganiza los commits locales en la parte superior de los commits traídos del remoto, en lugar de hacer un merge. Esto resulta en un historial de commits más lineal y limpio.
+Comando: git pull --rebase
+
+Hace el merge pero no crea un commit de merge automáticamente, permitiéndote revisar y hacer cambios antes de confirmar el merge.
+Comando: git pull --no-commit
+
+-HISTORIAS NO RELACIONADAS(Cuando se trata de mezclar dos repositorios diferentes)
+Sale el siguiente error
+error: fatal: refusing to merge unrelated histories
+Comando solución: git pull origin nombre-de-la-rama --allow-unrelated-histories
+
+-MODO VERBOSO
+Muestra más información sobre lo que está haciendo Git durante el pull. Esto puede ser útil para depuración.
+Comando: git pull --verbose
+
+-EVITAR CONFLICTOS DE MERGE AUTOMATICAMENTE
+Para que Git intente resolver automáticamente los conflictos durante el merge.Esto da preferencia a los cambios locales en caso de conflictos.
+Comando: git pull -X ours
+
+-SUBMÓDULOS
+Para proyectos que tienen submódulos y se desea actualizarlos.
+Comando: git pull --recurse-submodules
+
