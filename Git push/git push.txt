@@ -1,0 +1,50 @@
+------Información sobre Git push-----
+
+Este comando carga los cambios locales en el repositorio remoto.
+
+Tabla Resumen
+
+Comando                                      | Descripción
+---------------------------------------------|----------------------------------------------------------
+git push                                     | Sube los cambios de la rama actual al repositorio remoto predeterminado.
+git push origin nombre-de-la-rama            | Sube una rama específica al repositorio remoto.
+git push --force                             | Fuerza la subida, sobrescribiendo cualquier cambio en el remoto.
+git push --all                               | Sube todas las ramas locales al repositorio remoto.
+git push --tags                              | Sube todas las etiquetas (tags) locales al repositorio remoto.
+git push origin --delete nombre-de-la-rama   | Elimina una rama en el repositorio remoto.
+git push -u origin nombre-de-la-rama         | Establece el upstream (seguimiento) para la rama actual.
+git push --dry-run                           | Muestra qué cambios se enviarían al remoto sin realmente subirlos.
+
+
+-Normal
+Para subir los cambios de la rama actual al repositorio remoto predeterminado.
+Comando: git push
+
+-Especificar Ramas
+Para subir una rama específica al repositorio remoto.
+Comando: git push origin nombre-de-la-rama
+
+
+-Forzar la subida:
+Fuerza la subida, sobrescribiendo cualquier cambio en el remoto.
+Comando: git push --force
+
+-Subir todas las ramas locales:
+Sube todas las ramas locales al repositorio remoto.
+Comando: git push --all
+
+-Subir todas las etiquetas:
+Sube todas las etiquetas (tags) locales al repositorio remoto.
+Comando: git push --tags
+
+-Eliminar una rama en el remoto:
+ Elimina una rama en el repositorio remoto.
+ Comando: git push origin --delete nombre-de-la-rama
+
+-Establecer upstream:
+ Establece el upstream (seguimiento) para la rama actual, permitiendo que futuros `git push` y `git pull` sin argumentos se refieran automáticamente a la rama remota correspondiente.
+Comando: git push -u origin nombre-de-la-rama
+
+-Modo de Prueba:
+Muestra qué cambios se enviarían al remoto sin realmente subirlos.
+Comando: git push --dry-run
